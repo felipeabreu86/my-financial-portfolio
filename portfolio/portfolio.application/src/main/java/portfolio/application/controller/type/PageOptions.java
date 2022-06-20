@@ -1,0 +1,8 @@
+package portfolio.application.controller.type;
+
+public enum PageOptions {
+
+	DASHBOARD, WALLETS, FIXEDINCOME, VARIABLEINCOME, INVESTMENTABROAD, CRYPTOCURRENCIES, REPORTS, PROFILE, CONTACT,
+	ABOUT, NOTIFICATIONS;
+
+}
