@@ -1,12 +1,162 @@
+<!--
+
+=========================================================
+* Now UI Dashboard - v1.5.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-dashboard
+* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+<link rel="icon" type="image/png" href="/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Controle Patrimonial - Suas Finanças em Dia!</title>
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+	name='viewport' />
+<!--     Fonts and icons     -->
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+	rel="stylesheet">
+<!-- CSS Files -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+<link href="/css/ui-index.css" rel="stylesheet" />
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="/demo/demo.css" rel="stylesheet" />
 </head>
-<body>
-	Olá, mundo!<br/>
-	Você adicionou o ticker
-	<span th:text="${ticker}"></span>
+
+<body class="">
+	<div class="wrapper ">
+		<div class="sidebar" data-color="orange">
+			<div class="logo mt-2" align="center">
+				<a href="/" class="menu-top-logo"> Controle Patrimonial </a>
+			</div>
+			<div class="sidebar-wrapper" id="sidebar-wrapper">
+				<ul class="nav">
+					<li th:classappend="${page} == 'DASHBOARD' ? 'active'"><a
+						href="/dashboard"> <i
+							class="now-ui-icons business_chart-pie-36"></i> Painel
+					</a></li>
+					<li th:classappend="${page} == 'WALLETS' ? 'active'"><a
+						href="/wallets"> <i class="now-ui-icons business_briefcase-24"></i>
+							Carteiras
+					</a></li>
+					<li th:classappend="${page} == 'FIXEDINCOME' ? 'active'"><a
+						href="/fixedincome"> <i class="now-ui-icons business_bank"></i>
+							Renda Fixa
+					</a></li>
+					<li th:classappend="${page} == 'VARIABLEINCOME' ? 'active'"><a
+						href="/variableincome"> <i
+							class="now-ui-icons media-2_sound-wave"></i> Renda Variável
+					</a></li>
+					<li th:classappend="${page} == 'INVESTMENTABROAD' ? 'active'"><a
+						href="/investmentabroad"> <i
+							class="now-ui-icons location_world"></i> Exterior
+					</a></li>
+					<li th:classappend="${page} == 'CRYPTOCURRENCIES' ? 'active'"><a
+						href="/cryptocurrencies"> <i
+							class="now-ui-icons ui-1_lock-circle-open"></i> Criptomoedas
+					</a></li>
+					<li th:classappend="${page} == 'REPORTS' ? 'active'"><a
+						href="/reports"> <i class="now-ui-icons files_paper"></i>
+							Relatórios
+					</a></li>
+					<li th:classappend="${page} == 'PROFILE' ? 'active'"><div
+							class="logo"></div> <a href="/user/profile"> <i
+							class="now-ui-icons business_badge"></i> Perfil
+					</a></li>
+					<li th:classappend="${page} == 'LOGOUT' ? 'active'"><a
+						href="/user/logout"> <i class="now-ui-icons sport_user-run"></i>
+							Sair
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Início - Fragmento carregado de acordo com a escolha do item do Menu da tela Home -->
+		<th:block th:switch="${page}">
+			<div th:case="DASHBOARD">
+				<div th:replace="~{/dashboard/dashboard-fragment :: dashboard}"></div>
+			</div>
+			<div th:case="WALLETS">
+				<div th:replace="~{/wallets/wallets-fragment :: wallets}"></div>
+			</div>
+			<div th:case="FIXEDINCOME">
+				<div
+					th:replace="~{/fixedincome/fixedincome-fragment :: fixedincome}"></div>
+			</div>
+			<div th:case="VARIABLEINCOME">
+				<div
+					th:replace="~{/variableincome/variableincome-fragment :: variableincome}"></div>
+			</div>
+			<div th:case="INVESTMENTABROAD">
+				<div
+					th:replace="~{/investmentabroad/investmentabroad-fragment :: investmentabroad}"></div>
+			</div>
+			<div th:case="CRYPTOCURRENCIES">
+				<div
+					th:replace="~{/cryptocurrencies/cryptocurrencies-fragment :: cryptocurrencies}"></div>
+			</div>
+			<div th:case="REPORTS">
+				<div th:replace="~{/reports/reports-fragment :: reports}"></div>
+			</div>
+			<div th:case="PROFILE">
+				<div th:replace="~{/profile/profile-fragment :: profile}"></div>
+			</div>
+			<div th:case="CONTACT">
+				<div th:replace="~{/contact/contact-fragment :: contact}"></div>
+			</div>
+			<div th:case="ABOUT">
+				<div th:replace="~{/about/about-fragment :: about}"></div>
+			</div>
+			<div th:case="NOTIFICATIONS">
+				<div
+					th:replace="~{/notifications/notifications-fragment :: notifications}"></div>
+			</div>
+		</th:block>
+		<!-- Fim - Fragmento carregado de acordo com a escolha do item do Menu da tela Home -->
+	</div>
+
+	<!--   Core JS Files   -->
+	<script src="/js/core/jquery.min.js"></script>
+	<script src="/js/core/popper.min.js"></script>
+	<script src="/js/core/bootstrap.min.js"></script>
+	<script src="/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+	<!-- Chart JS -->
+	<script src="/js/plugins/chartjs.min.js"></script>
+	<!--  Notifications Plugin    -->
+	<script src="/js/plugins/bootstrap-notify.js"></script>
+	<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+	<script src="/js/now-ui-dashboard.min.js?v=1.5.0"
+		type="text/javascript"></script>
+	<!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+	<script src="/demo/demo.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Javascript method's body can be found in /js/demos.js
+			demo.initDashboardPageCharts();
+		});
+	</script>
+
 </body>
 </html>
