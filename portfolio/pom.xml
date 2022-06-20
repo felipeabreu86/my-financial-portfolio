@@ -30,6 +30,7 @@
 	<modules>
 		<module>br.com.myfinancial.domain</module>
 		<module>portfolio-domain</module>
+		<module>portfolio.domain</module>
 	</modules>
 
 </project>
