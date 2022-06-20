@@ -2,7 +2,9 @@ package portfolio.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Class that starts the application
@@ -12,8 +14,11 @@ import org.springframework.context.annotation.ComponentScan;
  * @since 0.01
  */
 @SpringBootApplication
+@EntityScan({ "portfolio.dataprovider.model" })
+@EnableJpaRepositories({ "portfolio.dataprovider.dao", })
 @ComponentScan(basePackages = { 
 		"portfolio.domain.repository",
+		"portfolio.dataprovider.repository",
 		"portfolio.domain.usecase.b3",
 		"portfolio.domain.usecase",
 		"portfolio.application.controller" })

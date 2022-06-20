@@ -45,6 +45,12 @@
 			<artifactId>portfolio.domain</artifactId>
 			<version>${revision}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>br.com.myfinancial</groupId>
+			<artifactId>portfolio.dataprovider</artifactId>
+			<version>${revision}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

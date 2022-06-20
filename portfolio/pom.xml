@@ -30,6 +30,7 @@
 	<modules>
 		<module>portfolio.domain</module>
 		<module>portfolio.application</module>
+		<module>portfolio.dataprovider</module>
 	</modules>
 
 </project>
