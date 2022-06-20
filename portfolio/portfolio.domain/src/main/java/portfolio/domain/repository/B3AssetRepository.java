@@ -2,6 +2,8 @@ package portfolio.domain.repository;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import portfolio.domain.entity.b3.B3Asset;
 
 /**
@@ -12,6 +14,7 @@ import portfolio.domain.entity.b3.B3Asset;
  * @version 0.01
  * @since 0.01
  */
+@Repository
 public interface B3AssetRepository {
 
 	/**

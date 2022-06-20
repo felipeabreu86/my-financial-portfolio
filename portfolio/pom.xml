@@ -28,9 +28,8 @@
 	</dependencies>
 
 	<modules>
-		<module>br.com.myfinancial.domain</module>
-		<module>portfolio-domain</module>
 		<module>portfolio.domain</module>
+		<module>portfolio.application</module>
 	</modules>
 
 </project>
