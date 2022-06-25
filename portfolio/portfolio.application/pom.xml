@@ -11,7 +11,6 @@
 	<name>application</name>
 	<description>Portfolio Application Project</description>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>br.com.myfinancial</groupId>
@@ -22,6 +21,12 @@
 		<dependency>
 			<groupId>br.com.myfinancial</groupId>
 			<artifactId>portfolio.dataprovider</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.myfinancial</groupId>
+			<artifactId>portfolio.service</artifactId>
 			<version>${revision}</version>
 		</dependency>
 

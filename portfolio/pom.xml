@@ -31,6 +31,7 @@
 		<module>portfolio.domain</module>
 		<module>portfolio.application</module>
 		<module>portfolio.dataprovider</module>
+		<module>portfolio.service</module>
 	</modules>
 
 </project>

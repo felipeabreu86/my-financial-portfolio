@@ -2,7 +2,6 @@ package portfolio.domain.usecase.b3;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import portfolio.domain.entity.b3.B3Asset;
@@ -19,10 +18,18 @@ import portfolio.domain.repository.B3AssetRepository;
 public class FindAllAssetsUsecase {
 
 	/**
-	 * B3 Asset Repository
+	 * Reference to B3 Asset Repository implementation
 	 */
-	@Autowired
-	private B3AssetRepository b3AssetRepository;
+	private final B3AssetRepository b3AssetRepository;
+
+	/**
+	 * Constructor Injection
+	 * 
+	 * @param b3AssetRepository - Implementation of B3 Asset Repository interface
+	 */
+	public FindAllAssetsUsecase(B3AssetRepository b3AssetRepository) {
+		this.b3AssetRepository = b3AssetRepository;
+	}
 
 	/**
 	 * Query the repository to search for all B3 assets registered in the database

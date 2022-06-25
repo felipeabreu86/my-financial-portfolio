@@ -15,17 +15,39 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import portfolio.application.controller.type.HttpError;
-import portfolio.application.service.MessageSourceService;
+import portfolio.service.service.MessageSourceService;
 
+/**
+ * Controller responsible for intercepting application errors via '/error' path,
+ * handling them and redirect to the generic page error
+ * 
+ * @author Felipe Abreu
+ * @version 0.01
+ * @since 0.01
+ */
 @Controller
 public class CustomErrorController implements ErrorController {
 
+	/**
+	 * Provides access to error attributes which can be logged or presented to the
+	 * user
+	 */
 	@Autowired
 	private ErrorAttributes errorAttributes;
 
+	/**
+	 * Reference to message source service implementation
+	 */
 	@Autowired
 	private MessageSourceService messageService;
 
+	/**
+	 * It handles the error thrown while using the application and redirects the
+	 * user to the generic page error
+	 * 
+	 * @param request - HTTP Servlet Request
+	 * @return generic page error with status and error description information
+	 */
 	@RequestMapping("/error")
 	public String handleError(HttpServletRequest request) {
 		Map<String, Object> attrs = errorAttributes.getErrorAttributes(new ServletWebRequest(request),

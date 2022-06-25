@@ -28,7 +28,8 @@ public interface B3AssetRepository {
 	 * Saves a new B3 asset in the database
 	 * 
 	 * @param asset - B3 asset to be saved in the database
+	 * @return B3Asset saved in database
 	 */
-	void save(B3Asset asset);
+	B3Asset save(B3Asset asset);
 
 }

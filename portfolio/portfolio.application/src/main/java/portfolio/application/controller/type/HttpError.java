@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import portfolio.application.service.MessageSourceService;
+import portfolio.service.service.MessageSourceService;
 
 /**
  * Enum to represent HTTP errors and provide an easy way to fetch their

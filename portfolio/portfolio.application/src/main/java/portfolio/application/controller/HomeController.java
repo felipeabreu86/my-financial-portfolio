@@ -26,9 +26,6 @@ public class HomeController {
 	 * Receives a Get request for the paths '/' and '/{pageChoice}' and redirects to
 	 * the corresponding page. The default page is 'dashboard'.
 	 * 
-	 * @author Felipe Abreu
-	 * @version 0.01
-	 * @since 0.01
 	 * @param pageChoice - user page navigation choice.
 	 * @return String indicating to load index page and the Model with 'page'
 	 *         attribute filled informing which fragment should be loaded.

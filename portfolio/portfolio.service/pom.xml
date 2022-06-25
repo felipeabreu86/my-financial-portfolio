@@ -7,16 +7,11 @@
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>portfolio.dataprovider</artifactId>
-	<name>dataprovider</name>
-	<description>Portfolio Dataprovider Project</description>
+	<artifactId>portfolio.service</artifactId>
+	<name>service</name>
+	<description>Portfolio Service Project</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>br.com.myfinancial</groupId>
 			<artifactId>portfolio.domain</artifactId>
