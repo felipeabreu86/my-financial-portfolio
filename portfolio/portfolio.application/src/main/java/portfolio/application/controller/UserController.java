@@ -20,17 +20,6 @@ import portfolio.application.controller.type.PageOptions;
 public class UserController {
 
 	/**
-	 * Log the user out and redirects to home page
-	 * 
-	 * @param model - Interface that defines a holder for model attributes
-	 * @return forward to home page
-	 */
-	@GetMapping(value = "/logout")
-	public String logout(Model model) {
-		return "forward:/";
-	}
-
-	/**
 	 * Load profile page
 	 * 
 	 * @param model - Interface that defines a holder for model attributes
