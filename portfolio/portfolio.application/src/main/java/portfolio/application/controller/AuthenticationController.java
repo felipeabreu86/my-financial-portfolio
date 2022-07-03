@@ -34,7 +34,7 @@ public class AuthenticationController {
 	 */
 	@PostMapping(value = "/loginredirect")
 	public String loginredirect(Model model) {
-		return "redirect:/" + PageOptions.DASHBOARD.toString();
+		return "redirect:/" + PageOptions.DASHBOARD.toString().toLowerCase();
 	}
 
 	/**

@@ -1,4 +1,4 @@
-package portfolio.service.service;
+package portfolio.service;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import portfolio.service.service.dto.LastPriceDto;
+import portfolio.service.dto.LastPriceDto;
 
 /**
  * This class implements the service related to the Brazilian stock exchange

@@ -28,10 +28,11 @@
 	</dependencies>
 
 	<modules>
+		<module>portfolio.shared</module>
 		<module>portfolio.domain</module>
 		<module>portfolio.application</module>
-		<module>portfolio.dataprovider</module>
 		<module>portfolio.service</module>
+		<module>portfolio.dataprovider</module>
 	</modules>
 
 </project>

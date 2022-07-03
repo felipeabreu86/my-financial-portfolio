@@ -1,11 +1,11 @@
-package portfolio.service.service;
+package portfolio.shared.util;
 
 import java.util.Locale;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * This class implements the service that aims to fetch messages from
@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
  * @version 0.01
  * @since 0.01
  */
-@Service
-public class MessageSourceService {
+@Component
+public class MessageUtil {
 
 	/**
 	 * Interface for resolving messages from *_messsage.properties

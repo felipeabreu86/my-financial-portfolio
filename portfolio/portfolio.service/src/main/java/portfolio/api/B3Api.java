@@ -1,4 +1,4 @@
-package portfolio.service.api;
+package portfolio.api;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import portfolio.service.service.B3Service;
+import portfolio.service.B3Service;
 
 /**
  * Class marked as a RestController to serve as an API that handles and responds

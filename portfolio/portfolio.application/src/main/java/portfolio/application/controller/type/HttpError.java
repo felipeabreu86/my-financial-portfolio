@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import portfolio.service.service.MessageSourceService;
+import portfolio.shared.util.MessageUtil;
 
 /**
  * Enum to represent HTTP errors and provide an easy way to fetch their
@@ -18,8 +18,8 @@ public enum HttpError {
 
 	HTTP400 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.400") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.400");
 		}
 
 		@Override
@@ -29,8 +29,8 @@ public enum HttpError {
 	},
 	HTTP401 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.401") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.401");
 		}
 
 		@Override
@@ -40,8 +40,8 @@ public enum HttpError {
 	},
 	HTTP402 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.402") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.402");
 		}
 
 		@Override
@@ -51,8 +51,8 @@ public enum HttpError {
 	},
 	HTTP403 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.403") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.403");
 		}
 
 		@Override
@@ -62,8 +62,8 @@ public enum HttpError {
 	},
 	HTTP404 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.404") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.404");
 		}
 
 		@Override
@@ -73,8 +73,8 @@ public enum HttpError {
 	},
 	HTTP405 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.405") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.405");
 		}
 
 		@Override
@@ -84,8 +84,8 @@ public enum HttpError {
 	},
 	HTTP406 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.406") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.406");
 		}
 
 		@Override
@@ -95,8 +95,8 @@ public enum HttpError {
 	},
 	HTTP407 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.407") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.407");
 		}
 
 		@Override
@@ -106,8 +106,8 @@ public enum HttpError {
 	},
 	HTTP408 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.408") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.408");
 		}
 
 		@Override
@@ -117,8 +117,8 @@ public enum HttpError {
 	},
 	HTTP409 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.409") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.409");
 		}
 
 		@Override
@@ -128,8 +128,8 @@ public enum HttpError {
 	},
 	HTTP410 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.410") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.410");
 		}
 
 		@Override
@@ -139,8 +139,8 @@ public enum HttpError {
 	},
 	HTTP411 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.411") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.411");
 		}
 
 		@Override
@@ -150,8 +150,8 @@ public enum HttpError {
 	},
 	HTTP412 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.412") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.412");
 		}
 
 		@Override
@@ -161,8 +161,8 @@ public enum HttpError {
 	},
 	HTTP413 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.413") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.413");
 		}
 
 		@Override
@@ -172,8 +172,8 @@ public enum HttpError {
 	},
 	HTTP414 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.414") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.414");
 		}
 
 		@Override
@@ -183,8 +183,8 @@ public enum HttpError {
 	},
 	HTTP415 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.415") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.415");
 		}
 
 		@Override
@@ -194,8 +194,8 @@ public enum HttpError {
 	},
 	HTTP416 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.416") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.416");
 		}
 
 		@Override
@@ -205,8 +205,8 @@ public enum HttpError {
 	},
 	HTTP417 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.417") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.417");
 		}
 
 		@Override
@@ -216,8 +216,8 @@ public enum HttpError {
 	},
 	HTTP500 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.500") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.500");
 		}
 
 		@Override
@@ -227,8 +227,8 @@ public enum HttpError {
 	},
 	HTTP501 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.501") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.501");
 		}
 
 		@Override
@@ -238,8 +238,8 @@ public enum HttpError {
 	},
 	HTTP502 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.502") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.502");
 		}
 
 		@Override
@@ -249,8 +249,8 @@ public enum HttpError {
 	},
 	HTTP503 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.503") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.503");
 		}
 
 		@Override
@@ -260,8 +260,8 @@ public enum HttpError {
 	},
 	HTTP504 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.504") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.504");
 		}
 
 		@Override
@@ -271,8 +271,8 @@ public enum HttpError {
 	},
 	HTTP505 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.505") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.505");
 		}
 
 		@Override
@@ -282,8 +282,8 @@ public enum HttpError {
 	},
 	HTTP511 {
 		@Override
-		public String getErrorMessage(MessageSourceService messageService) {
-			return messageService != null ? messageService.getMessageBy("error.http.511") : "";
+		public String getErrorMessage(MessageUtil messageUtil) {
+			return messageUtil.getMessageBy("error.http.511");
 		}
 
 		@Override
@@ -329,9 +329,9 @@ public enum HttpError {
 	 *                       files
 	 * @return Error message ou empty string if not found
 	 */
-	public static String getMessageBy(String httpErrorCode, MessageSourceService messageService) {
+	public static String getMessageBy(String httpErrorCode, MessageUtil messageUtil) {
 		HttpError httpError = from(httpErrorCode);
-		return httpError != null ? httpError.getErrorMessage(messageService) : "";
+		return httpError != null ? httpError.getErrorMessage(messageUtil) : "";
 	}
 
 	/**
@@ -348,6 +348,6 @@ public enum HttpError {
 	 *                       files
 	 * @return Error message ou empty string if not found
 	 */
-	public abstract String getErrorMessage(MessageSourceService messageService);
+	public abstract String getErrorMessage(MessageUtil messageUtil);
 
 }

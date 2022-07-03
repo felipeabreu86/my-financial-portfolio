@@ -20,7 +20,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 		"portfolio.application.*", 
 		"portfolio.domain.*", 
 		"portfolio.dataprovider.*",
-		"portfolio.service.*" })
+		"portfolio.service.*",
+		"portfolio.shared.util" })
 public class MyFinancialPortfolioApplication {
 
 	/**

@@ -7,21 +7,21 @@
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>portfolio.domain</artifactId>
-	<name>domain</name>
-	<description>Portfolio Domain Project</description>
+	<artifactId>portfolio.shared</artifactId>
+	<name>shared</name>
+	<description>Portfolio Shared Project</description>
 
 	<dependencies>
 		<dependency>
-			<groupId>br.com.myfinancial</groupId>
-			<artifactId>portfolio.shared</artifactId>
-			<version>${revision}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
-
+	
 </project>

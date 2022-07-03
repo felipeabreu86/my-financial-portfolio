@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import portfolio.application.controller.type.HttpError;
-import portfolio.service.service.MessageSourceService;
+import portfolio.shared.util.MessageUtil;
 
 /**
  * Controller responsible for intercepting application errors via '/error' path,
@@ -39,7 +39,7 @@ public class CustomErrorController implements ErrorController {
 	 * Reference to message source service implementation
 	 */
 	@Autowired
-	private MessageSourceService messageService;
+	private MessageUtil messageUtil;
 
 	/**
 	 * It handles the error thrown while using the application and redirects the
@@ -50,8 +50,8 @@ public class CustomErrorController implements ErrorController {
 	 */
 	@RequestMapping("/error")
 	public String handleError(HttpServletRequest request) {
-		Map<String, Object> attrs = errorAttributes.getErrorAttributes(new ServletWebRequest(request),
-				ErrorAttributeOptions.defaults());
+		Map<String, Object> attrs = errorAttributes
+				.getErrorAttributes(new ServletWebRequest(request), ErrorAttributeOptions.defaults());
 
 		// get error attributes
 		String status = attrs.getOrDefault("status", "").toString();
@@ -70,7 +70,7 @@ public class CustomErrorController implements ErrorController {
 
 		// send status and error description to error.html through request attributes
 		request.setAttribute("status", status);
-		request.setAttribute("errordescription", HttpError.getMessageBy(status, messageService));
+		request.setAttribute("errordescription", HttpError.getMessageBy(status, messageUtil));
 
 		// display generic page error
 		return "error";
