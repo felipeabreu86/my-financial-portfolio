@@ -51,4 +51,16 @@ public class MessageUtil {
 		return messageSource.getMessage(resourceCode, null, locale);
 	}
 
+	/**
+	 * Returns the message stored in the properties file from its identifier code
+	 * and add the arguments into it as parameters
+	 * 
+	 * @param resourceCode - resource identifier code
+	 * @param args - arguments
+	 * @return String containing the Message linked to the resource code
+	 */
+	public String getMessageBy(String resourceCode, Object... args) {
+		return messageSource.getMessage(resourceCode, args, locale);
+	}
+
 }
