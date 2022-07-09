@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import portfolio.service.dto.LastPriceDto;
+import portfolio.shared.util.JsonConverterUtil;
 
 /**
  * This class implements the service related to the Brazilian stock exchange
@@ -33,10 +34,10 @@ public class B3Service {
 	private RestTemplate restTemplate;
 
 	/**
-	 * Reference for the implementation of Json conversion service
+	 * Reference for the implementation of Json converter service
 	 */
 	@Autowired
-	private JsonConverterService jsonConverterService;
+	private JsonConverterUtil jsonConverterUtil;
 
 	/**
 	 * URI to request B3's API resource, stored in the 'application.properties'
@@ -93,9 +94,9 @@ public class B3Service {
 		if (resultFromApi.isPresent()) {
 			String json = resultFromApi.get();
 			try {
-				LastPriceDto lastPriceDto = jsonConverterService.isArray(json)
-						? jsonConverterService.readFirstValue(json, LastPriceDto[].class)
-						: jsonConverterService.readValue(json, LastPriceDto.class);
+				LastPriceDto lastPriceDto = jsonConverterUtil.isArray(json)
+						? jsonConverterUtil.readFirstValue(json, LastPriceDto[].class)
+						: jsonConverterUtil.readValue(json, LastPriceDto.class);
 				lastPrice = lastPriceDto != null ? lastPriceDto.getVl_fechamento() : BigDecimal.ZERO;
 			} catch (JsonProcessingException e) {
 				e.printStackTrace();

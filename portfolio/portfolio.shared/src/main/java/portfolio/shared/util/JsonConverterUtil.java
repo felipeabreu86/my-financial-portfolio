@@ -1,4 +1,4 @@
-package portfolio.service;
+package portfolio.shared.util;
 
 import java.util.Optional;
 
@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
  * @since 0.01
  */
 @Service
-public class JsonConverterService {
+public class JsonConverterUtil {
 
 	/**
 	 * ObjectMapper provides functionality for reading and writing JSON
