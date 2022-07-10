@@ -21,8 +21,8 @@ import portfolio.application.controller.type.PageOptions;
 public class HomeController {
 
 	/**
-	 * Receives a Get request for the paths '/' and '/{pageChoice}' and redirects to
-	 * the corresponding page. The default page is 'dashboard'.
+	 * Receives a Get request for path '/{pageChoice}' and redirects to the
+	 * corresponding page. The default page is 'dashboard'.
 	 * 
 	 * @param pageChoice - user page navigation choice.
 	 * @return String indicating to load index page and the Model with 'page'

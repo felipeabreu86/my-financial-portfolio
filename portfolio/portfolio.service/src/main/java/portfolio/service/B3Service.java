@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
+import portfolio.domain.usecase.B3Usecases;
 import portfolio.service.dto.LastPriceDto;
 import portfolio.shared.util.JsonConverterUtil;
 
@@ -25,6 +26,12 @@ import portfolio.shared.util.JsonConverterUtil;
  */
 @Service
 public class B3Service {
+
+	/**
+	 * Reference to all use cases implementations related to B3 assets
+	 */
+	@Autowired
+	private B3Usecases b3Usecases;
 
 	/**
 	 * Reference for the implementation of a Synchronous client to perform HTTP
@@ -45,6 +52,15 @@ public class B3Service {
 	 */
 	@Value("${b3.api}")
 	private String rawB3ApiUri;
+
+	/**
+	 * Returns the use cases related to Brazil exchange (B3) assets
+	 * 
+	 * @return B3 use cases
+	 */
+	public B3Usecases getB3Usecases() {
+		return b3Usecases;
+	}
 
 	/**
 	 * Updates the {ticker} parameter with asset's Ticker and returns the URI to be

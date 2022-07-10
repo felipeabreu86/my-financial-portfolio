@@ -8,7 +8,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 /**
- * This class implements the service that aims to fetch messages from
+ * This class implements the component that aims to fetch messages from
  * /resources/messages/*_messsage.properties files.
  * 
  * @author Felipe Abreu

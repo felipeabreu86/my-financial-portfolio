@@ -2,7 +2,7 @@ package portfolio.shared.util;
 
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -12,14 +12,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 /**
- * This class implements the service related to data transformation between Java
- * Object and Json format
+ * This class implements the component related to data transformation between
+ * Java Object and Json format
  * 
  * @author Felipe Abreu
  * @version 0.01
  * @since 0.01
  */
-@Service
+@Component
 public class JsonConverterUtil {
 
 	/**

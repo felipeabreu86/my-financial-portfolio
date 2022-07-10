@@ -1,6 +1,6 @@
 package portfolio.domain.usecase.b3;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import portfolio.domain.entity.b3.B3Asset;
 import portfolio.domain.repository.B3AssetRepository;
@@ -12,7 +12,7 @@ import portfolio.domain.repository.B3AssetRepository;
  * @version 0.01
  * @since 0.01
  */
-@Service
+@Component
 public class SaveAssetUsecase {
 
 	/**

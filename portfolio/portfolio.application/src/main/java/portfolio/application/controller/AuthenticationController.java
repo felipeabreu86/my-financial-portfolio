@@ -1,11 +1,9 @@
 package portfolio.application.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import java.security.Principal;
 
-import portfolio.application.controller.type.PageOptions;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Controller that handles requests related to user authentication.
@@ -18,34 +16,32 @@ import portfolio.application.controller.type.PageOptions;
 public class AuthenticationController {
 
 	/**
+	 * Receives a Get request for path '/' and forwards to '/login' as the solution
+	 * doesn't has a home page.
 	 * 
-	 * @param model
-	 * @return
+	 * @return forward to /login
 	 */
-	@GetMapping(value = { "/", "/login" })
-	public String login(Model model) {
+	@GetMapping(value = "/")
+	public String home() {
+		return "forward:/login";
+	}
+
+	/**
+	 * Receives a Get request for path '/login' and redirects to login page.
+	 * 
+	 * @param principal - represents the user logged in
+	 * @return redirects to '/dashboard' if the user is logged in or to '/login' if
+	 *         not.
+	 */
+	@GetMapping(value = "/login")
+	public String login(final Principal principal) {
+		boolean userIsLoggedIn = principal != null;
+		
+		if (userIsLoggedIn) {
+			return "redirect:/dashboard";
+		}
+		
 		return "login";
-	}
-
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
-	@PostMapping(value = "/loginredirect")
-	public String loginredirect(Model model) {
-		return "redirect:/" + PageOptions.DASHBOARD.toString().toLowerCase();
-	}
-
-	/**
-	 * Log the user out and redirects to home page
-	 * 
-	 * @param model - Interface that defines a holder for model attributes
-	 * @return forward to home page
-	 */
-	@GetMapping(value = "/logout")
-	public String logout(Model model) {
-		return "redirect:/login";
 	}
 
 }

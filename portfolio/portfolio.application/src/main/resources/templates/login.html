@@ -5,34 +5,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" type="image/png" href="/img/favicon.ico" />
+<link rel="icon" type="image/png" th:href="@{/img/favicon.ico}" />
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/bootstrap/css/bootstrap.min.css">
+	th:href="@{/login/vendor/bootstrap/css/bootstrap.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	th:href="@{/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	th:href="@{/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/animate/animate.css">
+	th:href="@{/login/vendor/animate/animate.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/css-hamburgers/hamburgers.min.css">
+	th:href="@{/login/vendor/css-hamburgers/hamburgers.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/animsition/css/animsition.min.css">
+	th:href="@{/login/vendor/animsition/css/animsition.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/select2/select2.min.css">
+	th:href="@{/login/vendor/select2/select2.min.css}">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="/login/vendor/daterangepicker/daterangepicker.css">
+	th:href="@{/login/vendor/daterangepicker/daterangepicker.css}">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="/login/css/util.css">
-<link rel="stylesheet" type="text/css" href="/login/css/main.css">
+<link rel="stylesheet" type="text/css" th:href="@{/login/css/util.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/login/css/main.css}">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -46,8 +46,7 @@
 						conta! </span>
 				</div>
 
-				<form class="login100-form validate-form"
-					th:action="@{/loginredirect}" method="post">
+				<form class="login100-form validate-form" th:action="@{/login}" method="post">
 					<div class="wrap-input100 validate-input m-b-26"
 						data-validate="O usuário é obrigatório">
 						<span class="label-input100">Usuário</span> <input
@@ -59,16 +58,16 @@
 					<div class="wrap-input100 validate-input m-b-18"
 						data-validate="A senha é obrigatória">
 						<span class="label-input100">Senha</span> <input class="input100"
-							type="password" name="pass" placeholder="Digite a sua senha">
+							type="password" name="password" placeholder="Digite a sua senha">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="flex-sb-m w-full p-b-30">
 						<div>
-							<a href="#" class="txt1"> Esqueceu a senha? </a>
+							<a th:href="@{#}" class="txt1"> Esqueceu a senha? </a>
 						</div>
 						<div>
-							<a href="#" class="txt1"> Crie a sua conta</a>
+							<a th:href="@{#}" class="txt1"> Crie a sua conta</a>
 						</div>
 					</div>
 
@@ -81,21 +80,21 @@
 	</div>
 
 	<!--===============================================================================================-->
-	<script src="/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script th:src="@{/login/vendor/jquery/jquery-3.2.1.min.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/vendor/animsition/js/animsition.min.js"></script>
+	<script th:src="@{/login/vendor/animsition/js/animsition.min.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/vendor/bootstrap/js/popper.js"></script>
-	<script src="/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script th:src="@{/login/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{/login/vendor/bootstrap/js/bootstrap.min.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/vendor/select2/select2.min.js"></script>
+	<script th:src="@{/login/vendor/select2/select2.min.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/login/vendor/daterangepicker/daterangepicker.js"></script>
+	<script th:src="@{/login/vendor/daterangepicker/moment.min.js}"></script>
+	<script th:src="@{/login/vendor/daterangepicker/daterangepicker.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/vendor/countdowntime/countdowntime.js"></script>
+	<script th:src="@{/login/vendor/countdowntime/countdowntime.js}"></script>
 	<!--===============================================================================================-->
-	<script src="/login/js/main.js"></script>
+	<script th:src="@{/login/js/main.js}"></script>
 
 </body>
 </html>
