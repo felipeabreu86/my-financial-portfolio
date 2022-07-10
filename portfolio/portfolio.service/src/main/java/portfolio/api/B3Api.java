@@ -25,9 +25,6 @@ import portfolio.service.B3Service;
 @RequestMapping(value = "/api/b3")
 public class B3Api {
 
-	/**
-	 * Reference to B3 Service implementation
-	 */
 	@Autowired
 	private B3Service b3PriceService;
 

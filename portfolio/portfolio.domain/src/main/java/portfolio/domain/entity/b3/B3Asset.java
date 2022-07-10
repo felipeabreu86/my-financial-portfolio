@@ -29,9 +29,6 @@ public abstract class B3Asset {
 	@JoinColumn(name = "b3_asset_data_id")
 	private B3AssetData b3AssetData;
 
-	/**
-	 * Default constructor
-	 */
 	public B3Asset() {
 		super();
 	}
@@ -47,11 +44,6 @@ public abstract class B3Asset {
 		this.b3AssetData = new B3AssetData(stock, ticker);
 	}
 
-	/**
-	 * Getter for the reference of b3 asset data instance
-	 * 
-	 * @return B3 asset data reference
-	 */
 	public B3AssetData getB3AssetData() {
 		return b3AssetData;
 	}

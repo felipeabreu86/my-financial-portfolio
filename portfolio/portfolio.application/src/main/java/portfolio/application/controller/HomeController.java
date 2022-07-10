@@ -21,6 +21,17 @@ import portfolio.application.controller.type.PageOptions;
 public class HomeController {
 
 	/**
+	 * Receives a Get request for path '/' and forwards to '/login' as the solution
+	 * doesn't have a home page.
+	 * 
+	 * @return forward to /login
+	 */
+	@GetMapping(value = "/")
+	public String home() {
+		return "forward:/login";
+	}
+
+	/**
 	 * Receives a Get request for path '/{pageChoice}' and redirects to the
 	 * corresponding page. The default page is 'dashboard'.
 	 * 

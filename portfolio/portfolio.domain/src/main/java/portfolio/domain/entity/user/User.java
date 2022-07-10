@@ -1,40 +1,32 @@
 package portfolio.domain.entity.user;
 
-import javax.persistence.Entity;
+import javax.persistence.Column;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name = "users")
+@MappedSuperclass
 public class User {
 
 	@Id
+	@Column(name = "username")
 	private String username;
+
+	@Column(name = "password")
 	private String password;
+
+	@Column(name = "enabled")
 	private Boolean enabled;
 
 	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+		return this.username;
 	}
 
 	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+		return this.password;
 	}
 
 	public Boolean getEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
+		return this.enabled;
 	}
 
 }

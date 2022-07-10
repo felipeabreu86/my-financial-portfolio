@@ -16,15 +16,9 @@ import portfolio.domain.usecase.b3.SaveAssetUsecase;
 @Component
 public class B3Usecases {
 
-	/**
-	 * Reference to 'find all assets' use case implementation
-	 */
 	@Autowired
 	public FindAllAssetsUsecase findAllAssetsUseCase;
 
-	/**
-	 * Reference to 'save asset' use case implementation
-	 */
 	@Autowired
 	public SaveAssetUsecase saveAssetUsecase;
 

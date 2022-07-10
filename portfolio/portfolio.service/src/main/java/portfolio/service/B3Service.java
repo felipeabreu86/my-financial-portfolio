@@ -27,22 +27,12 @@ import portfolio.shared.util.JsonConverterUtil;
 @Service
 public class B3Service {
 
-	/**
-	 * Reference to all use cases implementations related to B3 assets
-	 */
 	@Autowired
 	private B3Usecases b3Usecases;
 
-	/**
-	 * Reference for the implementation of a Synchronous client to perform HTTP
-	 * requests
-	 */
 	@Autowired
 	private RestTemplate restTemplate;
 
-	/**
-	 * Reference for the implementation of Json converter service
-	 */
 	@Autowired
 	private JsonConverterUtil jsonConverterUtil;
 

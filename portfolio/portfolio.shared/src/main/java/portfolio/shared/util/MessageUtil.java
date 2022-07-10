@@ -18,9 +18,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageUtil {
 
-	/**
-	 * Interface for resolving messages from *_messsage.properties
-	 */
 	@Autowired
 	private MessageSource messageSource;
 
@@ -30,12 +27,10 @@ public class MessageUtil {
 	 */
 	private Locale locale = new Locale("pt", "BR");
 
-	/**
-	 * Setter for Locale
-	 * 
-	 * @param locale - represents a specific geographical, political, or cultural
-	 *               region, not null
-	 */
+	public Locale getLocale() {
+		return locale;
+	}
+
 	public void setLocale(Locale locale) {
 		Objects.requireNonNull(locale);
 		this.locale = locale;
@@ -56,7 +51,7 @@ public class MessageUtil {
 	 * and add the arguments into it as parameters
 	 * 
 	 * @param resourceCode - resource identifier code
-	 * @param args - arguments
+	 * @param args         - arguments
 	 * @return String containing the Message linked to the resource code
 	 */
 	public String getMessageBy(String resourceCode, Object... args) {

@@ -27,9 +27,6 @@ import portfolio.service.B3Service;
 @RequestMapping(value = "/b3")
 public class B3Controller {
 
-	/**
-	 * Reference to B3 Service implementation
-	 */
 	@Autowired
 	private B3Service b3Service;
 
@@ -44,7 +41,7 @@ public class B3Controller {
 	@PostMapping(value = "/save")
 	public ResponseEntity<Object> saveB3Asset(Model model, @RequestBody @Valid B3AssetCreateRequest request) {
 		B3Asset asset = request.toB3Asset();
-		
+
 		b3Service
 			.getB3Usecases()
 			.saveAssetUsecase

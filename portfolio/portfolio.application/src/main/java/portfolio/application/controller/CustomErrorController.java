@@ -28,16 +28,9 @@ import portfolio.shared.util.MessageUtil;
 @Controller
 public class CustomErrorController implements ErrorController {
 
-	/**
-	 * Provides access to error attributes which can be logged or presented to the
-	 * user
-	 */
 	@Autowired
 	private ErrorAttributes errorAttributes;
 
-	/**
-	 * Reference to message source service implementation
-	 */
 	@Autowired
 	private MessageUtil messageUtil;
 

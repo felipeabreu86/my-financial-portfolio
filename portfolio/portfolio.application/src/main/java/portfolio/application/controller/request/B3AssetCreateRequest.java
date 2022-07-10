@@ -28,40 +28,18 @@ public class B3AssetCreateRequest {
 	@NotBlank
 	private String type;
 
-	/**
-	 * Getter for Ticker
-	 * 
-	 * @return Brazilian stock exchange symbol (Ticker)
-	 */
 	public String getTicker() {
 		return ticker;
 	}
 
-	/**
-	 * Setter for Ticker
-	 * 
-	 * @param ticker - Brazilian stock exchange symbol (Ticker)
-	 */
 	public void setTicker(String ticker) {
 		this.ticker = ticker;
 	}
 
-	/**
-	 * Getter for Type
-	 * 
-	 * @return Type of asset referring to investment in the Brazilian stock exchange
-	 *         (B3)
-	 */
 	public String getType() {
 		return type;
 	}
 
-	/**
-	 * Setter for Type
-	 * 
-	 * @param type - Type of asset referring to investment in the Brazilian stock
-	 *             exchange (B3)
-	 */
 	public void setType(String type) {
 		this.type = type;
 	}

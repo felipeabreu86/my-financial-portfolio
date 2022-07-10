@@ -44,9 +44,6 @@ public class B3AssetData {
 	@Column(nullable = false, unique = true)
 	private String ticker;
 
-	/**
-	 * Default constructor
-	 */
 	public B3AssetData() {
 		super();
 	}
@@ -65,20 +62,10 @@ public class B3AssetData {
 		this.ticker = ticker.toUpperCase();
 	}
 
-	/**
-	 * Getter for type
-	 * 
-	 * @return type of B3 asset
-	 */
 	public B3AssetType getType() {
 		return type;
 	}
 
-	/**
-	 * Getter for ticker
-	 * 
-	 * @return symbol of B3 asset
-	 */
 	public String getTicker() {
 		return ticker;
 	}

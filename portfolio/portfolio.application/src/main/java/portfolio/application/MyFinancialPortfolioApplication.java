@@ -14,12 +14,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @since 0.01
  */
 @SpringBootApplication
-@EntityScan({ "portfolio.domain.entity.*" })
-@EnableJpaRepositories({ "portfolio.dataprovider.dao", })
+@EntityScan({ 
+	"portfolio.domain.entity", 
+	"portfolio.dataprovider.model" })
+@EnableJpaRepositories({ 
+	"portfolio.dataprovider.dao", })
 @ComponentScan(basePackages = { 
-		"portfolio.application.*", 
-		"portfolio.domain.*", 
-		"portfolio.dataprovider.*",
+		"portfolio.application", 
+		"portfolio.domain.usecase", 
+		"portfolio.dataprovider.repository",
 		"portfolio.service",
 		"portfolio.shared.util" })
 public class MyFinancialPortfolioApplication {

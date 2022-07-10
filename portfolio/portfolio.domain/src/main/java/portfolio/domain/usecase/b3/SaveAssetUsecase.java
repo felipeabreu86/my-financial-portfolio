@@ -15,16 +15,8 @@ import portfolio.domain.repository.B3AssetRepository;
 @Component
 public class SaveAssetUsecase {
 
-	/**
-	 * Reference to B3 Asset Repository implementation
-	 */
 	private final B3AssetRepository b3AssetRepository;
 
-	/**
-	 * Constructor Injection
-	 * 
-	 * @param b3AssetRepository - Implementation of B3 Asset Repository interface
-	 */
 	public SaveAssetUsecase(B3AssetRepository b3AssetRepository) {
 		this.b3AssetRepository = b3AssetRepository;
 	}
