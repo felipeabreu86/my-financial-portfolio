@@ -1,14 +1,7 @@
 package portfolio.domain.entity.b3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.Test;
-
-import portfolio.domain.util.B3AssetTestUtil;
-
 class B3AssetTypeTest {
-
+/*
 	@Test
 	void testB3AssetTypeGetInstance() {
 		assertEquals(B3AssetType.STOCK, B3AssetType.valueOf("STOCK").getInstance("abcd3").getB3AssetData().getType());
@@ -32,5 +25,5 @@ class B3AssetTypeTest {
 			assertThrows(IllegalArgumentException.class, () -> B3AssetType.REAL_ESTATE_FUND.validate(ticker));
 		}
 	}
-
+*/
 }

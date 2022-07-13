@@ -3,7 +3,7 @@ package portfolio.dataprovider.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import portfolio.dataprovider.model.UserModel;
+import portfolio.dataprovider.model.user.UserModel;
 
 /**
  * JPA Repository for Users

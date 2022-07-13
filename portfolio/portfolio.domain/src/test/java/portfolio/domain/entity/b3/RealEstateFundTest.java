@@ -1,15 +1,7 @@
 package portfolio.domain.entity.b3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.Test;
-
-import portfolio.domain.util.B3AssetTestUtil;
-
 class RealEstateFundTest {
-
+/*
 	@Test
 	void testNewRealEstateFundWithNullTicker() {
 		assertThrows(NullPointerException.class, () -> new RealEstateFund(null));
@@ -44,5 +36,5 @@ class RealEstateFundTest {
 	void testB3AssetType() {
 		assertEquals(B3AssetType.REAL_ESTATE_FUND, new RealEstateFund("abcd11").getB3AssetData().getType());
 	}
-
+*/
 }

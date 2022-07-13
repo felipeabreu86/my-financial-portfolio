@@ -3,7 +3,7 @@ package portfolio.dataprovider.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import portfolio.domain.entity.b3.B3Asset;
+import portfolio.dataprovider.model.b3.B3AssetModel;
 
 /**
  * JPA Repository for B3 Asset
@@ -13,6 +13,6 @@ import portfolio.domain.entity.b3.B3Asset;
  * @since 0.01
  */
 @Repository
-public interface B3AssetDao extends JpaRepository<B3Asset, Long> {
+public interface B3AssetDao extends JpaRepository<B3AssetModel, Long> {
 
 }

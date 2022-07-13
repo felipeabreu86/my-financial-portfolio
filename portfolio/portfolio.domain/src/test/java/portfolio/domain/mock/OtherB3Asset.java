@@ -5,7 +5,7 @@ import portfolio.domain.entity.b3.B3AssetType;
 
 public class OtherB3Asset extends B3Asset {
 	public OtherB3Asset() {
-		super();
+		super(null, null);
 	}
 
 	public OtherB3Asset(B3AssetType type, String ticker) {

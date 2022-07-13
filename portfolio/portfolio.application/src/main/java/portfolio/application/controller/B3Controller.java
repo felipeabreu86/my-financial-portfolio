@@ -1,5 +1,7 @@
 package portfolio.application.controller;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import portfolio.application.controller.request.B3AssetCreateRequest;
+import portfolio.dataprovider.model.b3.B3AssetModel;
 import portfolio.domain.entity.b3.B3Asset;
 import portfolio.service.B3Service;
 
@@ -36,18 +39,20 @@ public class B3Controller {
 	 * 
 	 * @param model   - Interface that defines a holder for model attributes
 	 * @param request - Data sent in the request body
-	 * @return HTTP status 201 (Created) or some HTTP error if applicable
+	 * @return HTTP status 201 (Created) or HTTP 500 in case of error
 	 */
 	@PostMapping(value = "/save")
 	public ResponseEntity<Object> saveB3Asset(Model model, @RequestBody @Valid B3AssetCreateRequest request) {
-		B3Asset asset = request.toB3Asset();
+		B3AssetModel assetModel = request.toB3AssetModel();
 
-		b3Service
-			.getB3Usecases()
-			.saveAssetUsecase
-			.call(asset);
-		
-		return ResponseEntity.status(HttpStatus.CREATED).build();
+		Optional<B3Asset> asset = b3Service
+				.getB3Usecases()
+				.saveAssetUsecase
+				.call(assetModel);
+
+		return asset.isPresent() 
+				? ResponseEntity.status(HttpStatus.CREATED).build()
+				: ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 	}
 
 }

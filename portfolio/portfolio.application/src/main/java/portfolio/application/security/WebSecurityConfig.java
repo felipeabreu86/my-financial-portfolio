@@ -30,6 +30,7 @@ public class WebSecurityConfig implements HttpSessionListener {
 				"/login" };
 
 		return http
+				.httpBasic().and()
 				.authorizeRequests()
 				.antMatchers(authorizedResources)
 				.permitAll()

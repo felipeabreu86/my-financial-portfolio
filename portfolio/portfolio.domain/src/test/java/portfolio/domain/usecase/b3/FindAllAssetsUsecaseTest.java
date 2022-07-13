@@ -1,18 +1,7 @@
 package portfolio.domain.usecase.b3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.List;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
-import portfolio.domain.entity.b3.B3Asset;
-import portfolio.domain.entity.b3.B3AssetType;
-import portfolio.domain.mock.B3AssetRepositoryImplMock;
-
 class FindAllAssetsUsecaseTest {
-
+/*
 	private static FindAllAssetsUsecase usecase;
 
 	@BeforeAll
@@ -46,5 +35,5 @@ class FindAllAssetsUsecaseTest {
 		assertEquals("ABCD11", lista.get(1).getB3AssetData().getTicker());
 		assertEquals(B3AssetType.REAL_ESTATE_FUND, lista.get(1).getB3AssetData().getType());
 	}
-
+*/
 }

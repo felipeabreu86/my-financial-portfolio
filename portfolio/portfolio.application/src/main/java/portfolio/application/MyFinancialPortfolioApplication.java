@@ -15,8 +15,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @SpringBootApplication
 @EntityScan({ 
-	"portfolio.domain.entity", 
-	"portfolio.dataprovider.model" })
+	"portfolio.domain.entity.b3", 
+	"portfolio.domain.entity.user",
+	"portfolio.dataprovider.model.b3",
+	"portfolio.dataprovider.model.user"})
 @EnableJpaRepositories({ 
 	"portfolio.dataprovider.dao", })
 @ComponentScan(basePackages = { 

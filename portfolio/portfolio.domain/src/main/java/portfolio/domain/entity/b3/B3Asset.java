@@ -1,51 +1,50 @@
 package portfolio.domain.entity.b3;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
 /**
- * Abstract Class responsible for defining the basis for an instance of the
- * financial asset type of the Brazilian stock exchange (B3)
+ * Class responsible for defining the basis for an instance of the financial
+ * asset type of the Brazilian stock exchange (B3)
  * 
  * @author Felipe Abreu
  * @version 0.01
  * @since 0.01
  */
-@Entity
-@Table(name = "b3_assets")
-public abstract class B3Asset {
+@MappedSuperclass
+public class B3Asset {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "b3_asset_data_id")
-	private B3AssetData b3AssetData;
+	@Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	protected B3AssetType type;
 
-	public B3Asset() {
-		super();
+	@Column(nullable = false, unique = true)
+	protected String ticker;
+
+	public B3Asset(B3AssetType type, String ticker) {
+		this.type = type;
+		this.ticker = ticker;
 	}
 
-	/**
-	 * Overloaded constructor that receives B3 asset data
-	 * 
-	 * @param type   - type of asset referring to investment in the Brazilian stock
-	 *               exchange (B3), not null
-	 * @param ticker - asset stock symbol (ticker), not null
-	 */
-	public B3Asset(B3AssetType stock, String ticker) {
-		this.b3AssetData = new B3AssetData(stock, ticker);
+	public long getId() {
+		return id;
 	}
 
-	public B3AssetData getB3AssetData() {
-		return b3AssetData;
+	public B3AssetType getType() {
+		return type;
+	}
+
+	public String getTicker() {
+		return ticker;
 	}
 
 }

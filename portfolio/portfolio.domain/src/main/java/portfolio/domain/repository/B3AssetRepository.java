@@ -1,6 +1,7 @@
 package portfolio.domain.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import portfolio.domain.entity.b3.B3Asset;
 
@@ -27,6 +28,6 @@ public interface B3AssetRepository {
 	 * @param asset - B3 asset to be saved in the database
 	 * @return B3Asset saved in database
 	 */
-	B3Asset save(B3Asset asset);
+	Optional<B3Asset> save(B3Asset asset);
 
 }

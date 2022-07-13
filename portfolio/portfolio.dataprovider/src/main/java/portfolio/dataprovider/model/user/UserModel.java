@@ -1,4 +1,4 @@
-package portfolio.dataprovider.model;
+package portfolio.dataprovider.model.user;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

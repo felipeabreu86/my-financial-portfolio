@@ -2,7 +2,7 @@ package portfolio.application.controller.request;
 
 import javax.validation.constraints.NotBlank;
 
-import portfolio.domain.entity.b3.B3Asset;
+import portfolio.dataprovider.model.b3.B3AssetModel;
 import portfolio.domain.entity.b3.B3AssetType;
 
 /**
@@ -50,8 +50,9 @@ public class B3AssetCreateRequest {
 	 * 
 	 * @return B3Asset reference
 	 */
-	public B3Asset toB3Asset() {
-		return B3AssetType.valueOf(type.toUpperCase()).getInstance(this.ticker);
+	public B3AssetModel toB3AssetModel() {
+		B3AssetType type = B3AssetType.valueOf(this.type.toUpperCase());
+		return new B3AssetModel(type, ticker);
 	}
 
 }

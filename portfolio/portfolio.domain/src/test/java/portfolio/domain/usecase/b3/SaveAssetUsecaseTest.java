@@ -1,21 +1,7 @@
 package portfolio.domain.usecase.b3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
-import portfolio.domain.entity.b3.B3Asset;
-import portfolio.domain.entity.b3.B3AssetType;
-import portfolio.domain.entity.b3.RealEstateFund;
-import portfolio.domain.entity.b3.Stock;
-import portfolio.domain.mock.B3AssetRepositoryImplMock;
-import portfolio.domain.mock.OtherB3Asset;
-import portfolio.domain.util.B3AssetTestUtil;
-
 class SaveAssetUsecaseTest {
-
+/*
 	private static SaveAssetUsecase usecase;
 
 	@BeforeAll
@@ -55,5 +41,5 @@ class SaveAssetUsecaseTest {
 			assertThrows(IllegalArgumentException.class, () -> usecase.call(new RealEstateFund(ticker)));
 		}
 	}
-
+*/
 }

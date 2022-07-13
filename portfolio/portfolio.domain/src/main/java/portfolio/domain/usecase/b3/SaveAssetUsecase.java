@@ -1,5 +1,8 @@
 package portfolio.domain.usecase.b3;
 
+import java.util.Objects;
+import java.util.Optional;
+
 import org.springframework.stereotype.Component;
 
 import portfolio.domain.entity.b3.B3Asset;
@@ -27,11 +30,8 @@ public class SaveAssetUsecase {
 	 * @param asset - B3 asset to be saved in the database
 	 * @return B3Asset saved in database
 	 */
-	public B3Asset call(B3Asset asset) {
-		if (asset == null || asset.getB3AssetData() == null) {
-			throw new NullPointerException("B3 Asset and its data must not be null.");
-		}
-		return b3AssetRepository.save(asset);
+	public Optional<B3Asset> call(B3Asset asset) {
+		return b3AssetRepository.save(Objects.requireNonNull(asset, "B3 Asset and its data must not be null."));
 	}
 
 }

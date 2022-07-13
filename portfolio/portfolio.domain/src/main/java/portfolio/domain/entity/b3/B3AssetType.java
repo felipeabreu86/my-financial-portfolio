@@ -15,7 +15,7 @@ public enum B3AssetType {
 	STOCK {
 		@Override
 		public B3Asset getInstance(String ticker) {
-			return new Stock(ticker);
+			return new B3Asset(STOCK, ticker);
 		}
 
 		@Override
@@ -30,7 +30,7 @@ public enum B3AssetType {
 	REAL_ESTATE_FUND {
 		@Override
 		public B3Asset getInstance(String ticker) {
-			return new RealEstateFund(ticker);
+			return new B3Asset(REAL_ESTATE_FUND, ticker);
 		}
 
 		@Override
